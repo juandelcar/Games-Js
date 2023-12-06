@@ -1,0 +1,282 @@
+body {
+  background: transparent;
+  margin: 0;
+}
+
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -5;
+}
+
+h1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Comfortaa", sans-serif;
+  font-family: "Nova Square", sans-serif;
+  font-size: 3.125em;
+  color: white;
+  text-align: center;
+}
+
+.target {
+  position: relative;
+  width: 85%;
+  max-width: 550px;
+  height: 350px;
+  margin: 5% auto;
+  border-radius: 30px;
+  background: transparent;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  border: 1.3px solid;
+  animation: borderAnimation 3s infinite alternate;
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-color: violet;
+  }
+
+  50% {
+    border-color: blue;
+  }
+
+  100% {
+    border-color: cyan;
+  }
+}
+
+.content {
+  position: relative;
+  padding-top: 15px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "j1 j2 j3"
+    "j4 j5 j6";
+}
+
+.j1,
+.j2,
+.j3,
+.j4,
+.j5,
+.j6 {
+  width: 115px;
+  height: 115px;
+  margin: 0;
+  border-radius: 30px;
+  border: transparent;
+  cursor: pointer;
+}
+
+@keyframes pulse-grow {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.j1 {
+  grid-area: j1;
+  margin: 30px 0px 0px 40px;
+  background: url("media/gato_icon.png") center/cover no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+}
+
+.j1:hover {
+  animation-name: pulse-grow;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.j2 {
+  grid-area: j2;
+  margin: 30px 0px 0px -20px;
+  background: url("media/mummble_icon.png") center/cover no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+}
+
+.j2:hover {
+  animation-name: pulse-grow;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.j3 {
+  grid-area: j3;
+  margin: 30px 0px 0px -85px;
+  background: url("media/rps_icon.jpg") center/cover no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+}
+
+.j3:hover {
+  animation-name: pulse-grow;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.j4 {
+  grid-area: j4;
+  margin: 30px 0px 30px 40px;
+  background: url("media/Ahorcado.png") center/cover no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+}
+
+.j4:hover {
+  animation-name: pulse-grow;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.j5 {
+  grid-area: j5;
+  margin: 30px 0px 30px -20px;
+  background: url("media/Buscaminas.jpg") center/cover no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+}
+
+.j5:hover {
+  animation-name: pulse-grow;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.j6 {
+  grid-area: j6;
+  margin: 30px 30px 30px -80px;
+  background: url("media/ladron.jpeg") center/cover no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+}
+
+.j6:hover {
+  animation-name: pulse-grow;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@media (min-width: 10px) and (max-width: 800px) {
+  h1 {
+    margin-top: 35px;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+  }
+
+  .target {
+    margin-top: 40px;
+    width: 300px;
+    height: 410px;
+    backdrop-filter: blur(2px);
+    border: 1px solid;
+    animation: borderAnimation 5s infinite alternate;
+  }
+
+  @keyframes borderAnimation {
+    0% {
+      border-color: rgb(255, 0, 255);
+    }
+
+    50% {
+      border-color: rgb(0, 0, 255);
+    }
+
+    100% {
+      border-color: rgb(0, 153, 255);
+    }
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "j1 j2" 
+      "j3 j4"
+      "j5 j6";
+  }
+
+  .j1,
+  .j2,
+  .j3,
+  .j4,
+  .j5,
+  .j6 {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+  }
+
+  @keyframes pulse-grow {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.1);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .j1 {
+    margin: 10px 0px 0px 25px;
+  }
+
+  .j2 {
+    margin: 10px 0px 0px 18px;
+  }
+
+  .j3 {
+    margin: 30px 0px 0px 25px;
+  }
+
+  .j4 {
+    margin: 30px 0px 0px 18px;
+  }
+
+  .j5 {
+    margin: 30px 0px 0px 25px;
+  }
+
+  .j6 {
+    margin: 30px 0px 0px 18px;
+  }
+}

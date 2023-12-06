@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="mina.png" type="image/x-icon">
+    <title>Busca Minas</title>
+    <link rel="stylesheet" href="buscaminas.css" />
+  </head>
+  <body>
+    <div id="back">
+      <a href="../../index.html"><img src="../../media/Play Room.jpg" alt=""></a>
+    </div>
+    <div class="container">
+      <canvas id="game-canvas" width="300" height="300"></canvas>
+      <div class="select">
+        <label for="difficulty">Selecciona la dificultad:</label>
+        <select class="slc" id="difficulty" onchange="startGame(this.value)">
+          <option value="facil">Fácil</option>
+          <option value="medio">Medio</option>
+          <option value="dificil">Difícil</option>
+        </select>
+      </div>
+      <div class="buttons">
+        <button class="btn" onclick="startGame()">
+          <span></span>
+          <p
+            data-start="good luck!"
+            data-text="start!"
+            data-title="new game"
+          ></p>
+        </button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="buscaminas.js"></script>
+  </body>
+</html>
